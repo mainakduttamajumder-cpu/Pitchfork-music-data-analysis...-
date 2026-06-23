@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pitchwork-data-analyzer"
+version = "0.1.0"
+description = "Generate a polished PDF analysis report from a Pitchfork SQLite database."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "matplotlib>=3.8",
+    "reportlab>=4.0",
+]
+
+[project.scripts]
+pitchwork-analyzer = "Pitchwork_Data_Analyzer:main"
+
+[tool.setuptools]
+py-modules = ["Pitchwork_Data_Analyzer"]
